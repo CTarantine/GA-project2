@@ -18,15 +18,15 @@ const getLocation = (locationId) => {
 }
 
 const addNewLocation = (newLocation) => {
-    return locationCollection.insertMany(newLocation)
+    return locationCollection.create(newLocation)
 }
 
 const updateLocation = (locationId,updatedLocation) => {
-    return locationCollection.findByIdAndUpdate(locationId,updatedLocation)
+    return locationCollection.findByIdAndUpdate({locationId},updatedLocation)
 }
 
-const deleteLocation = (id) =>{
-    return locationCollection.findByIdAndDelete({_id:id})
+const deleteLocation = (locationId) =>{
+    return locationCollection.findByIdAndDelete({locationId})
 }
 
 module.exports = {

@@ -18,15 +18,15 @@ const getOneReview = (reviewId) => {
 }
 
 const addNewReview = (newReview) => {
-    return reviewCollection.insertMany(newReview)
+    return reviewCollection.create(newReview)
 }
 
 const updateReview = (reviewId,updatedReview) => {
-    return reviewCollection.findByIdAndUpdate (reviewId,updatedReview)
+    return reviewCollection.findByIdAndUpdate ({reviewId},updatedReview)
 }
 
-const deleteReview = (id) =>{
-    return reviewCollection.findByIdAndDelete({_id:id})
+const deleteReview = (reviewId) =>{
+    return reviewCollection.findByIdAndDelete({reviewId})
 }
 
 module.exports = {

@@ -12,7 +12,7 @@ locationRouter.get('/', (req, res) => {
         })
 })
 
-locationRouter.get('/new', function (req, res) {
+locationRouter.get('/new', (req, res) => {
     res.render('location/newLocation')
 })
 
@@ -25,29 +25,29 @@ locationRouter.get('/:locationId/editLocation', (req, res) => {
 
 locationRouter.get('/:locationId', (req, res) => {
     locationApi.getLocation(req.params.locationId)
-    .then(location =>{
-        res.render('location/location', { location })
-    })
+        .then(location => {
+            res.render('location/location', { location })
+        })
 })
 
 //CHANGE .SEND() TO .REDIRECT(PAGE)
 locationRouter.post('/', (req, res) => {
     locationApi.addNewLocation(req.body)
-    .then(() =>{
-        res.redirect('/location')
-    })
+        .then(() => {
+            res.redirect('/location')
+        })
 })
 
-locationRouter.put('/:locationId', (req, res) =>{
+locationRouter.put('/:locationId', (req, res) => {
     locationApi.updateLocation(req.params.locationId, req.body)
-    .then(()=>{
-        res.redirect('/location')
-    })
+        .then(() => {
+            res.redirect('/location')
+        })
 })
 
-locationRouter.delete('/:index', function (req, res) {
+locationRouter.delete('/:locationId', (req, res) => {
     locationApi.deleteLocation(req.params.locationId)
-    .then(res.redirect('location'))
+        .then(res.redirect('/location'))
 })
 
 module.exports = {

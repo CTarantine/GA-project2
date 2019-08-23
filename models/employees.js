@@ -18,15 +18,15 @@ const getOneEmployee = (employeeId) => {
 }
 
 const addNewEmployee = (newEmployee) => {
-    return employeeCollection.insertMany(newEmployee)
+    return employeeCollection.create(newEmployee)
 }
 
 const updateEmployee = (employeeId,updatedEmployee) => {
-    return employeeCollection.findByIdAndUpdate(employeeId,updatedEmployee)
+    return employeeCollection.findByIdAndUpdate({employeeId},updatedEmployee)
 }
 
-const deleteEmployee = (id) =>{
-    return employeeCollection.findByIdAndDelete({_id:id})
+const deleteEmployee = (employeeId) =>{
+    return employeeCollection.findByIdAndDelete({employeeId})
 }
 
 module.exports = {
