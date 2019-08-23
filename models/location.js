@@ -1,10 +1,10 @@
 const mongoose = require ('./connection.js')
 
 const locationSchema = new mongoose.Schema ({
-    name: String,
     city: String,
     state: String,
-    zipcode: Number
+    zipcode: Number,
+    currently: Boolean
 })
 
 const locationCollection = mongoose.model('location', locationSchema)

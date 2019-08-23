@@ -2,8 +2,9 @@ const mongoose = require ('./connection.js')
 
 const employeeSchema = new mongoose.Schema ({
     name: String,
+    age: Number,
     title: String,
-    locationName: String
+    hireDate: Date
 })
 
 const employeeCollection = mongoose.model('employee', employeeSchema)
