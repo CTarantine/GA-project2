@@ -3,7 +3,7 @@ const mongoose = require ('./connection.js')
 const employeeSchema = new mongoose.Schema ({
     name: String,
     title: String,
-    location: String
+    locationName: String
 })
 
 const employeeCollection = mongoose.model('employee', employeeSchema)
@@ -12,7 +12,7 @@ const getAllEmployees = () => {
     return employeeCollection.find()
 }
 
-const getEmployee = (employeeId) => {
+const getOneEmployee = (employeeId) => {
     return employeeCollection.findById(employeeId)
 }
 
@@ -30,7 +30,7 @@ const deleteEmployee = (id) =>{
 
 module.exports = {
     getAllEmployees,
-    getEmployee,
+    getOneEmployee,
     addNewEmployee,
     updateEmployee,
     deleteEmployee 
