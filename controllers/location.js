@@ -17,28 +17,37 @@ locationRouter.get('/new', function (req, res) {
 })
 
 locationRouter.get('/:locationId/editLocation', (req, res) => {
-    res.render('createShop', {})
+    locationApi.getLocation(req.params.locationId)
+        .then(location => {
+            res.render('location/editLocation', { location })
+        })
 })
 
-shopRouter.get('/:index', function (req, res) {
-    const singleShop = shopsApi.getShop(req.params.index)
-    res.render('editShop', { singleShop, index: req.params.index })
+locationRouter.get('/:locationId', (req, res) => {
+    locationApi.getLocation(req.params.locationId)
+    .then(location =>{
+        res.render('location/location', { location })
+    })
 })
 
 //CHANGE .SEND() TO .REDIRECT(PAGE)
-shopRouter.post('/', (req, res) => {
-    shopsApi.addShop(req.body);
-    res.send(200);
+locationRouter.post('/', (req, res) => {
+    locationApi.addNewLocation(req.body)
+    .then(() =>{
+        res.redirect('/location')
+    })
 })
 
-shopRouter.put('/:index', function (req, res) {
-    shopsApi.updateShop(req.params.index, req.body);
-    res.send(200);
+locationRouter.put('/:locationId', (req, res) =>{
+    locationApi.updateLocation(req.params.locationId, req.body)
+    .then(()=>{
+        res.redirect('/location')
+    })
 })
 
-shopRouter.delete('/:index', function (req, res) {
-    shopsApi.deleteShop(req.params.index)
-    res.send(200);
+locationRouter.delete('/:index', function (req, res) {
+    locationApi.deleteLocation(req.params.locationId)
+    .then(res.redirect('location'))
 })
 
 module.exports = {
