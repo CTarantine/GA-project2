@@ -1,0 +1,12 @@
+<div class='employee'>
+    <h4>Name: </h4> {{employee.name}}
+    <h4>Age: </h4>{{employee.age}}
+    <h4>Title: </h4>{{employee.title}}
+    <h4>Employee Since: </h4>{{review.hireDate}}
+</div>
+
+<a href="/employees/{{employee._id}}/editEmployee">Edit Employee</a>
+
+<form method="POST" and action="/employees/{{employee._id}}?_method=DELETE">
+    <input type="submit" value="Remove Employee" />
+</form>

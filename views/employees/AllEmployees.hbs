@@ -1,0 +1,11 @@
+<h1>All Employees</h1>
+
+<div class='employeeList'>
+    {{#each employees}}
+    <form>
+        <a href="/employees/{{_id}}">{{name}}</a>
+    </form>
+    {{/each}}
+</div>
+
+<a href="/employees/new">Add Employee</a>
