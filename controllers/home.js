@@ -11,7 +11,7 @@ const homePageRouter = express.Router()
 
 
 homePageRouter.get('/', (req, res) => {
-  res.send(templateApi.getHelloWorldString())
+  res.render('/home')
 })
 
 
