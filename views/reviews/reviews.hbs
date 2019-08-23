@@ -1,0 +1,12 @@
+<div class='review'>
+    <h4>Name: </h4> {{review.name}}
+    <h4>Date: </h4>{{review.date}}
+    <h4>Location: </h4>{{review.locationAddress}}
+    <h4>Review: </h4>{{review.review}}
+</div>
+
+<a href="/reviews/{{review._id}}/editReview">Edit Review</a>
+
+<form method="POST" and action="/reviews/{{review._id}}?_method=DELETE">
+    <input type="submit" value="Delete Review" />
+</form>

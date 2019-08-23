@@ -1,0 +1,11 @@
+<h1>All Reviews</h1>
+
+<div class='reviewsList'>
+    {{#each reviews}}
+    <form>
+        <a href="/reviews/{{_id}}">{{name}}</a>
+    </form>
+    {{/each}}
+</div>
+
+<a href="/reviews/new">Add Review</a>
