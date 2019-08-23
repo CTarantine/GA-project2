@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
+const hbs = require('hbs')
 
 
 const { homePageRouter } = require('./controllers/home.js')
