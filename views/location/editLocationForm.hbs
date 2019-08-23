@@ -1,0 +1,20 @@
+<form method="POST" action="/location/{{location._id}}?_method=PUT">
+
+    <label for="city">City</label>
+    <input type="text" name="city" value="{{location.city}}"/>
+
+    <label for="state">State</label>
+    <input type="text" name="state" value="{{location.state}}">
+
+    <label for="zipcode">Zipcode</label>
+    <input type="text" name="zipcode" value="{{location.zipcode}}"/>
+
+    <label>Currenly Open</label>
+    <input type="checkbox"  name="currentlyOpen" value="true"/>
+    {{#if location.currentlyOpen}} checked {{/if}}/>
+
+
+<br>
+
+     <input type="submit" value="Update Location" />
+</form>

@@ -4,7 +4,7 @@ const locationSchema = new mongoose.Schema ({
     city: String,
     state: String,
     zipcode: Number,
-    currently: Boolean
+    currentlyOpen: Boolean
 })
 
 const locationCollection = mongoose.model('location', locationSchema)

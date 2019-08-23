@@ -1,0 +1,12 @@
+<div class='location'>
+    <h4>City: </h4> {{location.city}}
+    <h4>State: </h4>{{location.state}}
+    <h4>Zipcode: </h4>{{location.locationAddress}}
+    <h4>Currently Open: </h4>{{location.currentlyOpen}}
+</div>
+
+<a href="/location/{{location._id}}/editLocation">Edit Location</a>
+
+<form method="POST" and action="/location/{{location._id}}?_method=DELETE">
+    <input type="submit" value="Delete Location" />
+</form>

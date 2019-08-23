@@ -1,0 +1,11 @@
+<h1>All Locations</h1>
+
+<div class='locationList'>
+    {{#each location}}
+    <form>
+        <a href="/location/{{_id}}">{{city}}</a>
+    </form>
+    {{/each}}
+</div>
+
+<a href="/location/new">Add Location</a>
