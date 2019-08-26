@@ -39,7 +39,7 @@ reviewsRouter.post('/', (req, res) => {
         })
 })
 
-reviewsRouter.put('/:reviewsId', (req, res) => {
+reviewsRouter.put('/:reviewId', (req, res) => {
     reviewsApi.updateReview(req.params.reviewId, req.body)
         .then(() => {
             res.redirect('/reviews')
