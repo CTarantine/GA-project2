@@ -8,12 +8,12 @@ const reviewsRouter = express.Router()
 reviewsRouter.get('/', (req, res) => {
     reviewsApi.getAllReviews()
         .then(reviews => {
-            res.render('/reviews/allReviews', { reviews })
+            res.render('reviews/allReviews', { reviews })
         })
 })
 
 reviewsRouter.get('/new', (req, res) => {
-    res.render('reviews/newReview')
+    res.render('reviews/createReview')
 })
 
 reviewsRouter.get('/:reviewId/editReview', (req, res) => {
@@ -26,7 +26,7 @@ reviewsRouter.get('/:reviewId/editReview', (req, res) => {
 reviewsRouter.get('/:reviewId', (req, res) => {
     reviewsApi.getOneReview(req.params.reviewId)
         .then(location => {
-            res.render('reviews/review', { location })
+            res.render('reviews/reviews', { location })
         })
 })
 
