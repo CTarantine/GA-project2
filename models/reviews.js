@@ -22,11 +22,11 @@ const addNewReview = (newReview) => {
 }
 
 const updateReview = (reviewId,updatedReview) => {
-    return reviewCollection.findByIdAndUpdate ({reviewId},updatedReview)
+    return reviewCollection.findByIdAndUpdate (reviewId,updatedReview)
 }
 
 const deleteReview = (reviewId) =>{
-    return reviewCollection.findByIdAndDelete({reviewId})
+    return reviewCollection.findByIdAndDelete(reviewId)
 }
 
 module.exports = {

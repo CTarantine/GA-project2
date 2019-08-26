@@ -22,11 +22,11 @@ const addNewEmployee = (newEmployee) => {
 }
 
 const updateEmployee = (employeeId,updatedEmployee) => {
-    return employeeCollection.findByIdAndUpdate({employeeId},updatedEmployee)
+    return employeeCollection.findByIdAndUpdate(employeeId,updatedEmployee)
 }
 
 const deleteEmployee = (employeeId) =>{
-    return employeeCollection.findByIdAndDelete({employeeId})
+    return employeeCollection.findByIdAndDelete(employeeId)
 }
 
 module.exports = {

@@ -6,14 +6,14 @@ const employeesRouter = express.Router()
 
 
 employeesRouter.get('/', (req, res) => {
-    employeesApi.getAllemployeess()
+    employeesApi.getAllEmployees()
         .then(employees => {
-            res.render('/employees/allEmployees', { employees })
+            res.render('employees/allEmployees', { employees })
         })
 })
 
 employeesRouter.get('/new', (req, res) => {
-    res.render('employees/newEmployee')
+    res.render('employees/createEmployee')
 })
 
 employeesRouter.get('/:employeeId/editEmployee', (req, res) => {
@@ -26,12 +26,12 @@ employeesRouter.get('/:employeeId/editEmployee', (req, res) => {
 employeesRouter.get('/:employeeId', (req, res) => {
     employeesApi.getOneEmployee(req.params.employeeId)
         .then(employee => {
-            res.render('employees/employee', { employee })
+            res.render('employees/employees', { employee })
         })
 })
 
 employeesRouter.post('/', (req, res) => {
-    employeesApi.addNewemployee(req.body)
+    employeesApi.addNewEmployee(req.body)
         .then(() => {
             res.redirect('/employees')
         })
