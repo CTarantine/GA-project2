@@ -39,6 +39,8 @@ locationRouter.post('/', (req, res) => {
 })
 
 locationRouter.put('/:locationId', (req, res) => {
+    console.log('locationRouter - PUT - req.body', req.body)
+    console.log('locationRouter - PUT - req.params.locationId', req.params.locationId)
     locationApi.updateLocation(req.params.locationId, req.body)
         .then(() => {
             res.redirect('/location')
@@ -47,7 +49,9 @@ locationRouter.put('/:locationId', (req, res) => {
 
 locationRouter.delete('/:locationId', (req, res) => {
     locationApi.deleteLocation(req.params.locationId)
-        .then(res.redirect('/location'))
+        .then(() => {
+            res.redirect('/location')
+        })
 })
 
 module.exports = {

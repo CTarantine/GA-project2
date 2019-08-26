@@ -22,11 +22,11 @@ const addNewLocation = (newLocation) => {
 }
 
 const updateLocation = (locationId,updatedLocation) => {
-    return locationCollection.findByIdAndUpdate({locationId},updatedLocation)
+    return locationCollection.findByIdAndUpdate(locationId,updatedLocation)
 }
 
 const deleteLocation = (locationId) =>{
-    return locationCollection.findByIdAndDelete({locationId})
+    return locationCollection.findByIdAndDelete(locationId)
 }
 
 module.exports = {
