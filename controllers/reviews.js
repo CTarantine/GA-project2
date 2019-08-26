@@ -17,16 +17,18 @@ reviewsRouter.get('/new', (req, res) => {
 })
 
 reviewsRouter.get('/:reviewId/editReview', (req, res) => {
+    console.log('reviewsRouter - GET - req.params.reviewId', req.params.reviewId)
     reviewsApi.getOneReview(req.params.reviewId)
         .then(review => {
+            console.log('review', review)
             res.render('reviews/editReview', { review })
         })
 })
 
 reviewsRouter.get('/:reviewId', (req, res) => {
     reviewsApi.getOneReview(req.params.reviewId)
-        .then(location => {
-            res.render('reviews/reviews', { location })
+        .then(review => {
+            res.render('reviews/reviews', { review })
         })
 })
 
