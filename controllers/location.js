@@ -7,13 +7,13 @@ const locationRouter = express.Router()
 
 locationRouter.get('/', (req, res) => {
     locationApi.getAllLocations()
-        .then(locations => {
-            res.render('/location/allLocations', { locations })
+        .then(location => {
+            res.render('location/allLocations', { location })
         })
 })
 
 locationRouter.get('/new', (req, res) => {
-    res.render('location/newLocation')
+    res.render('location/createLocation')
 })
 
 locationRouter.get('/:locationId/editLocation', (req, res) => {

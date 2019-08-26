@@ -26,7 +26,7 @@ employeesRouter.get('/:employeeId/editEmployee', (req, res) => {
 employeesRouter.get('/:employeeId', (req, res) => {
     employeesApi.getOneEmployee(req.params.employeeId)
         .then(employee => {
-            res.render('employees/employees', { employee })
+            res.render('employees/employee', { employee })
         })
 })
 
