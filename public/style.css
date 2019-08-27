@@ -9,7 +9,7 @@ h1{
     font-size: 4em;
 }
 .home{
-    border:solid white;
+    /* border:solid white; */
     margin-right: 33%;
     margin-left: 33%;
     text-align: center;
@@ -18,21 +18,39 @@ h1{
     width:33%;
 }
 .homeBackgroundContainer{
-    border:solid white;
-    height:65vh;
+    /* border:solid white; */
+    height:70vh;
     display: flex;
 }
 .imageOne{
-    border:solid red;
+    /* border:solid red; */
     width:33vw;
+    background: url(/images/hype-hair.jpg) no-repeat center center;
+    background-size: cover;
+    animation:fade;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .imageTwo{
-    border:solid red;
+    /* border:solid red; */
     width:33vw;
+    background: url(/images/Flyer+Pic.jpg) no-repeat center center;
+    background-size: cover;
+    animation:fade;
+    animation-duration:15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .imageThree{
-    border:solid red;
+    /* border:solid red; */
     width:33vw;
+    background: url(/images/blog-post.png) no-repeat center center;
+    background-size: cover;
+    animation:fade;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .homeLink{
 text-align: center;
@@ -40,5 +58,14 @@ text-align: center;
 a {
     font-size: 2em;
     text-decoration: none;
-    color:fuchsia;
+    color:yellow;
+    text-shadow: 2px 2px 2px black;
+}
+a:hover{
+    color:yellow;
+}
+
+@keyframes fade{
+    from{opacity:.3;}
+    to{opacity:.7;}
 }
