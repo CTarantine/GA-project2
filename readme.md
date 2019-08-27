@@ -1,14 +1,25 @@
-#Heroku:https://floating-spire-40433.herokuapp.com/home
+# Cutie's House of Beauty
+
+General Assembly SEI- Project 2
+
+Heroku: [<https://floating-spire-40433.herokuapp.com/home>]
+
+## Overview
 
 A full stack server application made for a beauty salon
 
-#Wireframe
+![Homepage Screenshot](/public/images/Homepage_screenshot.png)
+
+## Wireframe
+
+![wireframe](/public/images/project2_wireframe.jpg)
+
+## ERD
+
+![ERD](/public/images/project2_ERD.jpg)
 
 
-#ERD
-
-
-#Technoligies used:
+## Technoligies used:
 
   HTML
 
