@@ -8,7 +8,8 @@ const locationRouter = express.Router()
 locationRouter.get('/', (req, res) => {
     locationApi.getAllLocations()
         .then(location => {
-            res.render('location/allLocations', { location })
+            res.send(200)
+            // res.render('location/allLocations', { location })
         })
 })
 
