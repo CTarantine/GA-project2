@@ -4,7 +4,7 @@ const employeeSchema = new mongoose.Schema ({
     name: String,
     age: Number,
     title: String,
-    hireDate: Date
+    hireDate: String
 })
 
 const employeeCollection = mongoose.model('employee', employeeSchema)

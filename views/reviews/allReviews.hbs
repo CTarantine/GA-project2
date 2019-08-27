@@ -1,9 +1,10 @@
-<h1>All Reviews</h1>
+<h1>Reviews</h1>
+<p class="homeLink"><a href="/home/">Home</a></p>
 
 <div class='reviewsList'>
     {{#each reviews}}
     <form>
-        <a href="/reviews/{{_id}}">{{name}}</a>
+        <a href="/reviews/{{_id}}">{{name}}, {{locationAddress}}</a>
     </form>
     {{/each}}
 </div>

@@ -1,11 +1,11 @@
 <div class='location'>
-    <h4>City: </h4> {{location.city}}
-    <h4>State: </h4>{{location.state}}
-    <h4>Zipcode: </h4>{{location.zipcode}}
-    <h4>Currently Open: </h4>{{#if currentlyOpen}}
-    <h3>Yes</h3>
+    <h2>City: {{location.city}}</h2> 
+    <h2>State: {{location.state}}</h2>
+    <h2>Zipcode: {{location.zipcode}}</h2>
+    <h2>Currently Open: {{#if currentlyOpen}}</h2>
+    <h2>Yes</h2>
   {{else}}
-    <h3>No</h3>
+    <h2>No</h2>
   {{/if}}
 </div>
 

@@ -2,7 +2,7 @@ const mongoose = require ('./connection.js')
 
 const reviewSchema = new mongoose.Schema ({
     name: String,
-    date: Date,
+    date: String,
     locationAddress: String,
     review: String
 })
