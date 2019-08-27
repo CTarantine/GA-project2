@@ -1,3 +1,15 @@
-<div>
-    TEST
+<h1>Employees</h1>
+<p class="homeLink"><a href="/home/">Home</a></p>
+
+<div class='employeeList'>
+    {{#each employees}}
+    <form>
+        <a class="all" href="/employees/{{_id}}">{{name}}</a>
+    </form>
+    <br>
+    <br>
+    <br>
+    {{/each}}
 </div>
+<br>
+<a href="/employees/new">Add Employee</a>
