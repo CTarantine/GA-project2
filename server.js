@@ -27,10 +27,10 @@ app.use(express.static(__dirname+"/public"))
 app.set('view engine', 'hbs')
 
 
-// app.use('/home', homePageRouter)
+app.use('/home', homePageRouter)
 app.use('/location', locationRouter)
 app.use('/employees', employeesRouter)
-// app.use('/reviews', reviewsRouter)
+app.use('/reviews', reviewsRouter)
 
 
 const PORT = process.env.PORT || 3000 
