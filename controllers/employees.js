@@ -8,7 +8,7 @@ const employeesRouter = express.Router()
 employeesRouter.get('/', (req, res) => {
     employeesApi.getAllEmployees()
         .then(employees => {
-            res.render('reviews/allReviews', { employees })
+            res.render('employees/testMe', { employees })
         })
 })
 
