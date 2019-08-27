@@ -1,12 +1,17 @@
+<div class="locationContainer">
 <h1>Locations</h1>
 <p class="homeLink"><a href="/home/">Home</a></p>
 
 <div class='locationList'>
     {{#each location}}
     <form>
-        <a href="/location/{{_id}}">{{city}}</a>
+        <a class="all" href="/location/{{_id}}">{{city}}</a>
     </form>
+    <br>
+    <br>
+    <br>
     {{/each}}
 </div>
-
+<br>
 <a href="/location/new">Add Location</a>
+</div>

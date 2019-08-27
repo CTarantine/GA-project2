@@ -4,9 +4,12 @@
 <div class='reviewsList'>
     {{#each reviews}}
     <form>
-        <a href="/reviews/{{_id}}">{{name}}, {{locationAddress}}</a>
+        <a class="all" href="/reviews/{{_id}}">{{locationAddress}}, {{date}}</a>
     </form>
+    <br>
+    <br>
+    <br>
     {{/each}}
 </div>
-
+<br>
 <a href="/reviews/new">Add Review</a>

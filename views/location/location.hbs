@@ -2,11 +2,11 @@
     <h2>City: {{location.city}}</h2> 
     <h2>State: {{location.state}}</h2>
     <h2>Zipcode: {{location.zipcode}}</h2>
-    <h2>Currently Open: {{#if currentlyOpen}}</h2>
+    {{!-- <h2>Currently Open: {{#if location.currentlyOpen}}</h2>
     <h2>Yes</h2>
   {{else}}
     <h2>No</h2>
-  {{/if}}
+  {{/if}} --}}
 </div>
 
 <a href="/location/{{location._id}}/editLocation">Edit Location</a>

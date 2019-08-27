@@ -4,9 +4,12 @@
 <div class='employeeList'>
     {{#each employees}}
     <form>
-        <a href="/employees/{{_id}}">{{name}}</a>
+        <a class="all" href="/employees/{{_id}}">{{name}}</a>
     </form>
+    <br>
+    <br>
+    <br>
     {{/each}}
 </div>
-
+<br>
 <a href="/employees/new">Add Employee</a>

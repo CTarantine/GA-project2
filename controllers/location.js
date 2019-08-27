@@ -26,6 +26,7 @@ locationRouter.get('/:locationId/editLocation', (req, res) => {
 locationRouter.get('/:locationId', (req, res) => {
     locationApi.getLocation(req.params.locationId)
         .then(location => {
+            console.log('Location - GET - location',location)
             res.render('location/location', { location })
         })
 })
