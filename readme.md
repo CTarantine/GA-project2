@@ -1,14 +1,16 @@
 # Cutie's House of Beauty
 
-General Assembly SEI- Project 2
+General Assembly SEI - Project 2
 
 Heroku: [<https://floating-spire-40433.herokuapp.com/home>]
 
+Project Board:[<https://github.com/CTarantine/GA-project2/projects/1>]
+
 ## Overview
 
-A full stack server application made for a beauty salon
-
 ![Homepage Screenshot](/public/images/Homepage_screenshot.png)
+
+A full stack server application made for a beauty salon. This application can be used to store information about locations, employees, and reviews. Create, read, update, and delete functionality allows the user to easily keep all information up to date.
 
 ## Wireframe
 
@@ -18,21 +20,24 @@ A full stack server application made for a beauty salon
 
 ![ERD](/public/images/project2_ERD.jpg)
 
+## Technologies used
 
-## Technoligies used:
+• Node
 
-  HTML
+• Mongoose/MongoDB
 
-  CSS
+• Express
 
-  JavaScript
+• Handlebars
 
-  Node.js
+• JavaScript
 
-  Handlebars
+• HTML
 
-  Express.js
+• CSS
 
-  MongoDB.js
+## Future developments/improvements
 
-  Mongoose
+• Add a login function giving only administrators the ability to create and edit/delete information
+
+• Create connection between models allowing employees and reviews to be connected to a particular location
