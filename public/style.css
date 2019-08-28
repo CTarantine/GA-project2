@@ -82,7 +82,8 @@ border-radius: 50%;
 }
 
 a:hover {
-    color: yellow;
+    color: rgb(128, 233, 128);
+    text-shadow: 3px 3px 3px black;
 }
 
 @keyframes fade {

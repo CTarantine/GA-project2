@@ -2,9 +2,9 @@
 
 General Assembly SEI - Project 2
 
-Heroku: [<https://floating-spire-40433.herokuapp.com/home>]
+Heroku: <https://floating-spire-40433.herokuapp.com/home>
 
-Project Board:[<https://github.com/CTarantine/GA-project2/projects/1>]
+Project Board: <https://github.com/CTarantine/GA-project2/projects/1>
 
 ## Overview
 
